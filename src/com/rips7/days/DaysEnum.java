@@ -6,7 +6,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.function.Function;
 
 public enum DaysEnum {
-  DAY_1(Day1.class, "day1/", "example1and2", "part1and2", "part1and2", Utils::readLinesAsInt);
+  DAY_1(Day1.class, "day1/", "example1and2", "part1and2", "part1and2", Utils::readLinesAsInt),
+  DAY_2(Day2.class, "day2/", "example1and2", "part1and2", "part1and2", Utils::readLines);
 
   private final Class<? extends Day<?>> dayClass;
 
