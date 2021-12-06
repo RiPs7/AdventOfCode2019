@@ -14,7 +14,7 @@ public final class Utils {
       if (is == null) throw new IOException();
       try (InputStreamReader isr = new InputStreamReader(is);
           BufferedReader reader = new BufferedReader(isr)) {
-        return reader.lines().collect(Collectors.toList());
+        return reader.lines().filter(line -> !line.startsWith("#")).collect(Collectors.toList());
       }
     } catch (IOException e) {
       throw new RuntimeException(e);
